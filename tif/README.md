@@ -1,16 +1,9 @@
 # tif
 
-A new Flutter project.
+Created by Haard Shah as Assignment for Round 2 
 
-## Getting Started
+Couldn't use and find some accurate icon due to exams , I hope it won't affect that much 
 
-This project is a starting point for a Flutter application.
+for the Providers , I had Used Riverpod
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Thank You. 
