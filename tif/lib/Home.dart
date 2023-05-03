@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tif/EventModel.dart';
+import 'package:tif/SearchableHome.dart';
 import 'package:tif/Service.dart';
 // import 'package:searchfield/searchfield.dart';
 import 'package:tif/card.dart';
@@ -33,30 +34,31 @@ class Home extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Events',style: TextStyle(fontSize: 24.sp,color: Colors.black),),
+                    
+                    Text('Events',style: TextStyle(fontSize: 24,color: Colors.black),),
                   ],
                 ),
                 Spacer(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GestureDetector(
-                  onTap: (){},
+                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => searchableHome(),));},
                   child: Icon(
                       Icons.search
                   ),
                ),
                
                Padding(
-                 padding: const EdgeInsets.fromLTRB(31,8,34,8),
+                 padding: const EdgeInsets.fromLTRB(14,8,20,8),
                  child: GestureDetector(
                     onTap: (){},
                     child: Icon(
-                        Icons.search
+                        Icons.more_vert_rounded
                     ),
                  ),
                )
