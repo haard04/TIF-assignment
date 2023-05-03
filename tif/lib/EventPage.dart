@@ -9,29 +9,50 @@ class eventPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context,WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: Text('Event Details')),
-      extendBodyBehindAppBar: true,
-      extendBody: true,
-      
-      body: Container(
-      width: 375,
-      color: Colors.white,
-      child: Column(
+      body: Stack(
         children: [
-          Row(
-            children: [
-              Container(
-                height: 244,
-                width: 375,
-                child: Image.network(SelectedEvent.banner_image,fit: BoxFit.fill),
+          Positioned(
 
+            child: Image.network(
+              height: 244,
+              
+              SelectedEvent.banner_image,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 20,
+            child: AppBar(
+              title: Text('Event Details'),
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              actions: [
+                Icon(Icons.save_rounded)
+              ],
+            ),
+          ),
+          Positioned(
+            top: 250,
+            left: 10,
+            right: 0,
+            bottom: 0,
+            child: Container(
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(SelectedEvent.title,style: TextStyle(fontSize: 35),)
+                    ],
+                  )
+                ],
               )
-            ],
-          )
+            ),
+          ),
         ],
-      ),
-    )
-    );
+      ),   );
     
   }
 }
